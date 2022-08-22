@@ -1,0 +1,68 @@
+body{
+
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 0 auto;
+    background-image: url("5039684.jpg");
+    color: white;
+    background-color: rgba(0, 0, 0, 0.819);
+    
+    
+    
+}
+form{
+
+    margin: 0 auto 50px;
+    background-color: rgba(20, 16, 72, 0.93);
+    max-width: 1000px;
+    min-width: 600px;
+    color: white;
+    border-radius: 2em;
+    border: 2px red double;
+}
+label, textarea{
+
+    display: block;
+    margin: 5px;
+
+}
+fieldset{
+    margin-bottom: 5px;
+    border: none;
+}
+input[id="submit"]{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+
+}
+#textarea
+{
+    margin: 10px;
+    border-radius: 10px;
+    width: 40rem;
+   
+
+}
+#name , #email, #number, #dropdown, #submit
+{
+    margin: 10px;
+    width: 40rem;
+    height: 3rem;
+    font-size: large;
+    border-radius: 10px;
+}
+#recommend, #checkbox {
+
+    width: 18px;
+    height: 18px;
+}
+#question{
+
+    color: red;
+}
+#title, #description{
+    text-align: center;
+}
