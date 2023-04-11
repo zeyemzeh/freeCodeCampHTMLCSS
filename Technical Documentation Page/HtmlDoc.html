@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Documentation</title>
+    <link href="HtmlDoc.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <nav id="navbar">
+      
+      <ul>
+        <header class="html">HTML</header>
+        <li><a class="nav-link" href="#What_is_HTML?">What is HTML?</a></li>
+        <li><a class="nav-link" href="#Anatomy_of_an_HTML_document" >Anatomy of an HTML document</a></li>
+        <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+        <li><a class="nav-link" href="#Adding_a_Title">Adding a Title</a></li>
+        <li><a class="nav-link" href="#Metadata">Metadata</a></li>
+        <li><a class="nav-link" href="#Applying_CSS_to_HTML">Applying CSS to HTML</a></li>
+        <li><a class="nav-link" href="#Headings_and_Paragraphs">Headings and Paragraphs</a></li>
+        <li><a class="nav-link" href="#Lists">Lists</a></li>
+        <li><a class="nav-link" href="#Creating_Hyperlinks">Creating Hyperlinks</a></li></ul>
+        
+      <!--<header clss="css">CSS</header>
+        <a class="nav-link" href=""></a>
+        <a class="nav-link" href=""></a>
+        <a class="nav-link" href=""></a>
+        <a class="nav-link" href=""></a>
+        <a class="nav-link" href=""></a> -->
+      
+    </nav>
+    <main id="main-doc">
+      <section id="What_is_HTML?" class="main-section">
+        <header>What is HTML?</header>
+        <p>HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:</p>
+        <code>My cat is very grumpy</code>
+        <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph (<p>) element:</p>
+        <code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code>
+      </section>
+
+      <section id="Anatomy_of_an_HTML_document" class="main-section">
+        <header>Anatomy of an HTML document</header>
+        <p>Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:</p>
+        
+        <pre><code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en-US"&gt;
+          &lt;head&gt;
+          &lt;meta charset="utf-8" /&gt;
+          &lt;title>My test page&lt;/title&gt;
+          &lt;/head&gt;
+            &lt;body&gt;
+            &lt;p>This is my page&lt;/p&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </code></pre>
+       
+      </section>
+
+      <section id="Attributes" class="main-section">
+        <header>Attributes</header>
+        <p>Elements can also have attributes. Attributes look like this:</p>
+        <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png" alt="attribute image">
+        <p>Attributes contain extra information about the element that won't appear in the content. In this example, the class attribute is an identifying name used to target the element with style information.</p>
+        <p>An attribute should have:</p>
+        <ul>
+          <li>A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)</li>
+          <li>The attribute name, followed by an equal sign.</li>
+          <li>An attribute value, wrapped with opening and closing quote marks.</li>
+        </ul>
+      </section>
+      
+      <section id="Adding_a_Title" class="main-section">
+        <header>Adding a Title</header>
+        <p>We've already seen the &lt;title&gt; element in action — this can be used to add a title to the document. This however can get confused with the &lt;h5&gt; element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!</p>
+        <ul>
+          <li>The <span>h5</span> element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)</li>
+          <li>The <span>title</span> element is metadata that represents the title of the overall HTML document (not the document's content.)</li>
+        </ul>
+      </section>
+
+      <section id="Metadata" class="main-section">
+        <header>Metadata</header>
+        <p>Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document — the &lt;meta&gt; element. Of course, the other stuff we are talking about in this article could also be thought of as metadata too. There are a lot of different types of &lt;meta&gt; elements that can be included in your page's &lt;head&gt;, but we won't try to explain them all at this stage, as it would just get too confusing. Instead, we'll explain a few things that you might commonly see, just to give you an idea.</p>
+        <p>In the example we saw above, this line was included:</p>
+        <code>&lt;meta charset="utf-8" /&gt;</code>
+      </section>
+
+      <section id="Applying_CSS_to_HTML" class="main-section">
+        <header>Applying CSS to HTML</header>
+        <p>Just about all websites you'll use in the modern day will employ CSS to make them look cool.These are most commonly applied to a web page using the &lt;link&gt; element.</p>
+        <p>The &lt;link&gt; element should always go inside the head of your document. This takes two attributes, <code>rel="stylesheet"</code>, which indicates that it is the document's stylesheet, and href, which contains the path to the stylesheet file:</p>
+        <code>&lt;link rel="stylesheet" href="my-css-file.css" /&gt;</code>
+      </section>
+      
+      <section id="Headings_and_Paragraphs" class="main-section">
+        <header>Headings and Paragraphs</header>
+        <p>In HTML, each paragraph has to be wrapped in a &lt;p&gt; element, like so:</p>
+        <code>&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</code>
+
+        <p>Each heading has to be wrapped in a heading element:</p>
+        <code>&lt;h5&gt;I am the title of the story.&lt;/h5&gt;</code>
+        <p>There are six heading elements: &lt;h5&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;. Each element represents a different level of content in the document; &lt;h5&gt; represents the main heading, &lt;h2&gt; represents subheadings, &lt;h3&gt; represents sub-subheadings, and so on.</p>
+      </section>
+
+      <section id="Lists" class="main-section">
+        <header>Lists</header>
+        <p> Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! Lists are everywhere on the web, too, and we've got three different types to worry about.</p>
+        <h5>Unordered</h5>
+        <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter.Every unordered list starts off with a &lt;ul&gt; element—this wraps around all the list items:</p>
+        <pre><code>&lt;ul&gt;
+          &lt;li&gt;milk&lt;/ul&gt;
+          &lt;li&gt;eggs&lt;/ul&gt;
+          &lt;li&gt;bread&lt;/ul&gt;
+          &lt;li&gt;hummus&lt;/ul&gt;
+          &lt;/ul&gt;</code></pre>
+
+        <h5>Ordered</h5>
+        <p>Ordered lists are lists in which the order of the items does matter.The markup structure is the same as for unordered lists, except that you have to wrap the list items in an &lt;ol&gt; element, rather than &lt;ul&gt;:</p>
+        <pre><code>&lt;ol&gt;
+          &lt;li&gt;Drive to the end of the road&lt;/li&gt;
+          &lt;li&gt;Turn right&lt;li&gt;
+          &lt;li&gt;Go straight across the first two roundabouts&lt;/li&gt;
+          &lt;li&gt;Turn left at the third roundabout&lt;/li&gt;
+          &lt;li&gt;The school is on your right, 300 meters up the road&lt;/li&gt;
+          &lt;/ol&gt;</code></pre>
+        <p>There are six heading elements: &lt;h5&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;. Each element represents a different level of content in the document; &lt;h5&gt; represents the main heading, &lt;h2&gt; represents subheadings, &lt;h3&gt; represents sub-subheadings, and so on.</p>
+      </section>
+
+      <section id="Creating_Hyperlinks" class="main-section">
+        <header>Creating Hyperlinks</header>
+        <h5>Anatomy of a link</h5>
+        <p>A basic link is created by wrapping the text or other content, inside an &lt;a&gt; element and using the href attribute, also known as a Hypertext Reference, or target, that contains the web address.</p>
+        <pre><code>&lt;p&gt;I'm creating a link to
+          &lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.
+          &lt;/p&gt;</code></pre>
+          <p>This gives us the following result:</p>
+          <p>I'm creating a link to <span style="color: blue;">the Mozilla homepage</span></p>
+
+        <h5>Block level links</h5>
+        <p>As mentioned before, almost any content can be made into a link, even block-level elements. If you have an image you want to make into a link, use the &lt;a&gt; element and reference the image file with the &lt;img&gt; element.</p>
+        <pre><code>&lt;a href="https://www.mozilla.org/en-US/"&gt;
+          &lt;img src="mozilla-image.png" alt="Mozilla homepage" /&gt;
+          &lt;/a&gt;</code></pre>
+
+        <h5>Using the download attribute when linking to a download</h5>
+        <p>When you are linking to a resource that's to be downloaded rather than opened in the browser, you can use the download attribute to provide a default save filename. Here's an example with a download link to the latest Windows version of Firefox:</p>
+        <pre><code>&lt;a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+          download="firefox-latest-64bit-installer.exe"&gt;
+          Download Latest Firefox for Windows (64-bit) (English, US)
+          &lt;/a&gt;</code></pre>
+
+        <h5>E-mail links</h5>
+        <p>It's possible to create links or buttons that, when clicked, open a new outgoing email message rather than linking to a resource or page. This is done using the &lt;a&gt; element and the mailto: URL scheme.</p>
+        <p>In its most basic and commonly used form, a mailto: link indicates the email address of the intended recipient. For example:</p>
+        <pre><code>
+          &lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</code></pre>
+      </section>
+
+      
+    </main>
+  </body>
+</html>
